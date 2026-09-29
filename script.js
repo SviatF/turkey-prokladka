@@ -1,4 +1,4 @@
-const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@melbet_turkey_official";
+const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@melbet_turkey/";
 
 const cta = document.getElementById("youtubeCta");
 const landing = document.querySelector(".landing");
