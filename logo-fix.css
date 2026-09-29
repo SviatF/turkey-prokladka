@@ -1,0 +1,53 @@
+/* Keep the uploaded channel logo perfectly centered and remove the old decorative ring behind it. */
+.brand-block{
+  position:relative;
+}
+
+.brand-ring{
+  position:relative !important;
+  width:122px !important;
+  height:122px !important;
+  padding:0 !important;
+  margin:0 auto !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+
+.brand-ring::before,
+.brand-ring::after{
+  content:none !important;
+  display:none !important;
+}
+
+.brand-ring img{
+  position:relative !important;
+  inset:auto !important;
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:contain !important;
+  object-position:50% 50% !important;
+  border-radius:50% !important;
+  transform:none !important;
+  filter:drop-shadow(0 0 10px rgba(255,255,255,.12)) drop-shadow(0 0 22px rgba(255,24,48,.48));
+}
+
+.brand-underline{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+@media (max-width:640px){
+  .brand-ring{
+    width:92px !important;
+    height:92px !important;
+  }
+}
