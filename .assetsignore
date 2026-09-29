@@ -1,0 +1,10 @@
+wrangler.jsonc
+README.md
+_headers
+_redirects
+.gitignore
+.github/
+.git/
+.git/**
+.wrangler/
+.wrangler/**
