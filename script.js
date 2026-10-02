@@ -1,6 +1,8 @@
 const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@melbet_turkey/";
+const TELEGRAM_CHANNEL_URL = "https://t.me/+lMgpDkM6T8owYTA8";
 
 const cta = document.getElementById("youtubeCta");
+const telegramCta = document.getElementById("telegramCta");
 const landing = document.querySelector(".landing");
 const shell = document.querySelector(".page-shell");
 
@@ -13,6 +15,22 @@ if (cta) {
       window.dataLayer.push({
         event: "youtube_channel_click",
         destination: YOUTUBE_CHANNEL_URL,
+      });
+    } catch (_) {
+      // CTA navigation should never be blocked by analytics.
+    }
+  });
+}
+
+if (telegramCta) {
+  telegramCta.href = TELEGRAM_CHANNEL_URL;
+
+  telegramCta.addEventListener("click", () => {
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "telegram_channel_click",
+        destination: TELEGRAM_CHANNEL_URL,
       });
     } catch (_) {
       // CTA navigation should never be blocked by analytics.
